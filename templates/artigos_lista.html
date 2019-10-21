@@ -1,0 +1,19 @@
+<html>
+    <head>
+    {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}">
+
+        <title>Artigos</title>
+    </head>
+    <body>
+        <h1>Artigos</h1>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+    </body>
+</html>
